@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Music",
+			"path": "."
+		},
+		{
+			"name": "images",
+			"path": "../../Downloads/Compressed/#06 How to create a Music Website Using HTML CSS and JavaScript/pol-4/images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Music"
+	}
+}

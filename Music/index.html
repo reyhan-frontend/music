@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="style.css">
+    <title>MUSIC</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <img src="./logo.png" class="logo">
+
+
+            <ul class="menu">
+            <div id="close" class="fas fa-times"></div>
+
+
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">NEW SONG</a></li>
+                <li><a href="#">ALBUM</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+              <div id="menubr" class="fas fa-bars"> </div>
+
+        </div>
+       
+        <section class="content">
+
+            <div class="left">
+                <h1>THE <br>REAL <br> MUSIC</h1>
+            </div>
+    
+            <div class="right">
+                <p>Click To Play</p>
+                <img src="/play.png" id="icon">
+            </div>
+    
+        </section>
+    </div>
+    <audio id="mysong">
+        <source src="./Walker.mp3" type="audio/mp3">
+    </audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+let navbar = document.querySelector('.navbar .menu')
+
+document.querySelector('#menubr').onclick = () =>{
+    navbar.classList.add('active');
+}
+document.querySelector('#close').onclick = () =>{
+    navbar.classList.remove('active');
+}
+
+    var mysong = document.getElementById("mysong")
+    var icon = document.getElementById("icon")
+
+    icon.onclick = function(){
+        if(mysong.paused){
+            mysong.play();
+            icon.src = "./pause.png"
+        }else{
+            mysong.pause();
+            icon.src = "./play.png"
+        }
+    }
+
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
